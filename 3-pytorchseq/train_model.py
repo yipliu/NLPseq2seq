@@ -71,8 +71,8 @@ def main():
     for epoch in range(N_EPOCHS):
         
         start_time = time.time()
+
         loop_train = tqdm(enumerate(train_iter), total=len(train_iter))
-        
         # train_loss: the loss that is averaged over all batches
         train_loss = train(model, loop_train, optimizer, criterion, CLIP, epoch, N_EPOCHS)
         

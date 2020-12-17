@@ -1,7 +1,7 @@
 import torch
 from tqdm import tqdm
 
-def evaluate(model, iterator, criterion, epoch, num_epochs):
+def evaluate(model, tqdm_iterator, criterion, epoch, num_epochs):
     
     model.eval()
     
@@ -9,7 +9,7 @@ def evaluate(model, iterator, criterion, epoch, num_epochs):
     
     with torch.no_grad():
     
-        for i, batch in iterator:
+        for i, batch in tqdm_iterator:
 
             src = batch.src
             trg = batch.trg
@@ -31,22 +31,21 @@ def evaluate(model, iterator, criterion, epoch, num_epochs):
             
             epoch_loss += loss.item()
 
-            averaged_loss = epoch_loss / iterator.total
+            averaged_loss = epoch_loss / tqdm_iterator.total
 
-            # update
-            iterator.set_description(f"Epoch [{epoch}/{num_epochs}]")
-            iterator.set_postfix(loss = averaged_loss)
+            # update progress bar
+            tqdm_iterator.set_description(f"Epoch [{epoch}/{num_epochs}]")
+            tqdm_iterator.set_postfix(loss = averaged_loss)
         
     return averaged_loss
 
-def train(model, iterator, optimizer, criterion, clip, epoch, num_epochs):
+def train(model, tqdm_iterator, optimizer, criterion, clip, epoch, num_epochs):
     
     model.train()
     
     epoch_loss = 0
 
-    #loop = tqdm(enumerate(iterator), total=len(iterator))
-    for i, batch in iterator:
+    for i, batch in tqdm_iterator:
         
         src = batch.src
         trg = batch.trg
@@ -80,9 +79,9 @@ def train(model, iterator, optimizer, criterion, clip, epoch, num_epochs):
         # sum the loss value to a running total
         epoch_loss += loss.item()
 
-        averaged_loss = epoch_loss / iterator.total
+        averaged_loss = epoch_loss / tqdm_iterator.total
         # update progress bar
-        iterator.set_description(f"Epoch [{epoch}/{num_epochs}]")
-        iterator.set_postfix(loss = averaged_loss)
+        tqdm_iterator.set_description(f"Epoch [{epoch}/{num_epochs}]")
+        tqdm_iterator.set_postfix(loss = averaged_loss)
         
-    return epoch_loss / iterator.total
+    return epoch_loss / tqdm_iterator.total
