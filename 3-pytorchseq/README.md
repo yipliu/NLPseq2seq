@@ -5,6 +5,4 @@ Reference:
 Tips from bentrevett:
  ***tqdm***
 
-for batch_idx, (data, targets) in tqdm(enumerate(train_loader), total=len(train_loader), leave=True):
-- leave=False -> one line
-- leave=True  -> many lines
+[tqdm video from bentrevett](https://www.youtube.com/watch?v=RKHopFfbPao)

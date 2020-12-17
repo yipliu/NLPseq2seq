@@ -7,6 +7,8 @@ from data_reader import load_datasets
 from utils import train, evaluate
 from model import Encoder, Decoder, Seq2Seq
 
+from tqdm import tqdm
+
 import time
 import math
 
@@ -42,6 +44,7 @@ def main():
 
     print("====> prepare Datasets")
     train_iter, val_iter, test_iter, DE, EN = load_datasets(BATCH_SIZE, device)
+    #len_train, len_val, len_test = len(train_iter), len(val_iter), len(test_iter)
     print("====> Datasets has been prepared")
 
     INPUT_DIM, OUTPUT_DIM = len(DE.vocab), len(EN.vocab) 
@@ -68,9 +71,13 @@ def main():
     for epoch in range(N_EPOCHS):
         
         start_time = time.time()
-
-        train_loss = train(model, train_iter, optimizer, criterion, CLIP)
-        valid_loss = evaluate(model, val_iter, criterion)
+        loop_train = tqdm(enumerate(train_iter), total=len(train_iter))
+        
+        # train_loss: the loss that is averaged over all batches
+        train_loss = train(model, loop_train, optimizer, criterion, CLIP, epoch, N_EPOCHS)
+        
+        loop_valid = tqdm(enumerate(val_iter), total=len(val_iter))
+        valid_loss = evaluate(model, loop_valid, criterion, epoch, N_EPOCHS)
 
         end_time = time.time()
 

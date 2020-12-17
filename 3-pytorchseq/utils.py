@@ -1,7 +1,7 @@
 import torch
 from tqdm import tqdm
 
-def evaluate(model, iterator, criterion):
+def evaluate(model, iterator, criterion, epoch, num_epochs):
     
     model.eval()
     
@@ -9,7 +9,7 @@ def evaluate(model, iterator, criterion):
     
     with torch.no_grad():
     
-        for i, batch in tqdm(enumerate(iterator), total=len(iterator)):
+        for i, batch in iterator:
 
             src = batch.src
             trg = batch.trg
@@ -30,16 +30,23 @@ def evaluate(model, iterator, criterion):
             loss = criterion(output, trg)
             
             epoch_loss += loss.item()
-        
-    return epoch_loss / len(iterator)
 
-def train(model, iterator, optimizer, criterion, clip):
+            averaged_loss = epoch_loss / iterator.total
+
+            # update
+            iterator.set_description(f"Epoch [{epoch}/{num_epochs}]")
+            iterator.set_postfix(loss = averaged_loss)
+        
+    return averaged_loss
+
+def train(model, iterator, optimizer, criterion, clip, epoch, num_epochs):
     
     model.train()
     
     epoch_loss = 0
-    
-    for i, batch in tqdm(enumerate(iterator), total=len(iterator)):
+
+    #loop = tqdm(enumerate(iterator), total=len(iterator))
+    for i, batch in iterator:
         
         src = batch.src
         trg = batch.trg
@@ -61,12 +68,21 @@ def train(model, iterator, optimizer, criterion, clip):
         
         loss = criterion(output, trg)
         
+        # calculate the gradients
         loss.backward()
         
+        # clip the gradients to prevent them from exploding 
         torch.nn.utils.clip_grad_norm_(model.parameters(), clip)
         
+        # update the parameters of our model
         optimizer.step()
         
+        # sum the loss value to a running total
         epoch_loss += loss.item()
+
+        averaged_loss = epoch_loss / iterator.total
+        # update progress bar
+        iterator.set_description(f"Epoch [{epoch}/{num_epochs}]")
+        iterator.set_postfix(loss = averaged_loss)
         
-    return epoch_loss / len(iterator)
+    return epoch_loss / iterator.total
