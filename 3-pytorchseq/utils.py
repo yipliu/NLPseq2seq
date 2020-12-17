@@ -1,4 +1,5 @@
 import torch
+from tqdm import tqdm
 
 def evaluate(model, iterator, criterion):
     
@@ -8,7 +9,7 @@ def evaluate(model, iterator, criterion):
     
     with torch.no_grad():
     
-        for i, batch in enumerate(iterator):
+        for i, batch in tqdm(enumerate(iterator), total=len(iterator)):
 
             src = batch.src
             trg = batch.trg
@@ -38,7 +39,7 @@ def train(model, iterator, optimizer, criterion, clip):
     
     epoch_loss = 0
     
-    for i, batch in enumerate(iterator):
+    for i, batch in tqdm(enumerate(iterator), total=len(iterator)):
         
         src = batch.src
         trg = batch.trg
