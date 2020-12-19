@@ -45,11 +45,19 @@ def main():
 
     INPUT_DIM, OUTPUT_DIM = len_vocab[0], len_vocab[1]
    
-
+    print("====Construct the model====")
     enc = Encoder(INPUT_DIM, ENC_EMB_DIM, HID_DIM, ENC_DROPOUT)
     dec = Decoder(OUTPUT_DIM, DEC_EMB_DIM, HID_DIM, DEC_DROPOUT)
     model = Seq2Seq(enc, dec, device).to(device)
+
+    # initialize the model to a special initialization
+    model.apply(init_weights)
+    print("Encoder Model is {}; \n Decoder Model is {}; \n Seq2Seq model is {}". \
+                                                                    format(enc, dec, model))
+                    
+
     print("-------Model Parameters----")
+    print(f'The model has {count_parameters(model):,} trainable parameters')
 
     optimizer = optim.Adam(model.parameters())
 
