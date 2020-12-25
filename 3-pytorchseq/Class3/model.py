@@ -48,6 +48,10 @@ class Attention(nn.Module):
         """
         unsequeeze: add a dim in given position
         repeat: repeat element n times in corresponding dim
+        e.g.: repeat(a, b, c):
+        - in dim=0, repeat a times
+        - in dim=1, repeat b times
+        - in dim=2, repeat c times
         """           
         # permute the dim
         # encoder_outputs = [src_len, batch_size, enc_hid_dim * 2]
