@@ -59,7 +59,7 @@ class Attention(nn.Module):
         # encoder_outputs = [batch_size, src_len, enc_hid_dim * 2]
 
         energy = torch.tanh(self.atten(torch.cat((hidden, encoder_outpus), dim=2)))
-        # energy = [batch_size, src_len, dec_hid_dim]
+        # energy = [batch_size, src_len, enc_hid_dim * 2 + dec_hid_dim]
 
         attention = self.v(energy).squeeze(2)
 
