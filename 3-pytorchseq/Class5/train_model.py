@@ -40,7 +40,7 @@ def main():
 
 
     ENC_EMB_DIM = 256
-    DEC_EMB_DIM = 256
+    DEC_EMB_DIM = 100
     ENC_HID_DIM = 512
     DEC_HID_DIM = 512
     ENC_DROPOUT = 0.5

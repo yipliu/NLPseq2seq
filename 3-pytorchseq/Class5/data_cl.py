@@ -47,4 +47,4 @@ class Lang():
 
     def fields_vocab(self, dataset):
         self.SRC.build_vocab(dataset, min_freq=2)
-        self.TRG.build_vocab(dataset, min_freq=2)
+        self.TRG.build_vocab(dataset, vectors = "glove.6B.100d", min_freq=2, unk_init= torch.Tensor.normal_)

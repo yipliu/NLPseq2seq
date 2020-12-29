@@ -39,15 +39,15 @@ def main():
     torch.backends.cudnn.deterministic = True
 
 
-    ENC_EMB_DIM = 256
-    DEC_EMB_DIM = 256
-    ENC_HID_DIM = 512
-    DEC_HID_DIM = 512
+    ENC_EMB_DIM = 100
+    DEC_EMB_DIM = 100
+    ENC_HID_DIM = 256
+    DEC_HID_DIM = 256
     ENC_DROPOUT = 0.5
     DEC_DROPOUT = 0.5
     BATCH_SIZE = 128
 
-    N_EPOCHS = 10
+    N_EPOCHS = 1000
     CLIP = 1
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -55,31 +55,34 @@ def main():
     print("===== Prepare the dataset====")
     #train_iter, val_iter, test_iter, (TRG_PAD_IDX, SRC_PAD_IDX), (SRC, TRG)= load_data(BATCH_SIZE, device)
     
-    language_model = Lang('de_core_news_sm', 'en_core_web_sm')
-    train_data, valid_data, test_data = language_model.load_data()
+    language_model = Lang('en_core_web_sm', 'en_core_web_sm')
+    train_data, test_data = language_model.load_data()
+    print(vars(train_data[0]))
     #language_model.SRC.build_vocab(train_data, min_freq=2)
     #language_model.TRG.build_vocab(train_data, min_freq=2)
     # Build vocabulary
     language_model.fields_vocab(train_data)
 
-    train_iter, val_iter, test_iter = BucketIterator.splits(
-                                        (train_data, valid_data, test_data), 
+    train_iter, test_iter = BucketIterator.splits(
+                                        (train_data, test_data), 
                                         sort_within_batch = True,
-                                        sort_key = lambda x: len(x.src),
+                                        sort_key = lambda x: len(x.s),
                                         batch_size = BATCH_SIZE, 
                                         device = 'cuda')
     
+    INPUT_DIM, OUTPUT_DIM = len(language_model.SRC.vocab), len(language_model.TRG.vocab) 
+
     print("The length of src_vocab is {}; \n The length of trg_vocab is {};". \
-                                                            format(len(language_model.SRC.vocab), len(language_model.TRG.vocab)))
+                                                            format(INPUT_DIM, OUTPUT_DIM))
     
-    INPUT_DIM, OUTPUT_DIM = len(language_model.SRC.vocab), len(language_model.TRG.vocab)   
+      
     #train_data = train_iter.dataset
     #fids = torch.save(train_data.fields, 'fields.pkl')
    
     TRG_PAD_IDX = language_model.TRG.vocab.stoi[language_model.TRG.pad_token]
     SRC_PAD_IDX = language_model.SRC.vocab.stoi[language_model.SRC.pad_token]
     torch.save(train_data.fields, 'fields.pkl')
-
+    print('The Fields: fields.pkl is stored in local')
     # create and initialize the loss function
     criterion = nn.CrossEntropyLoss(ignore_index=TRG_PAD_IDX)
 
@@ -118,7 +121,7 @@ def main():
         loop_train = tqdm(enumerate(train_iter), total=len(train_iter))
         train_loss = model_train(model, loop_train, optimizer, criterion, CLIP, epoch, N_EPOCHS)
         
-        loop_valid = tqdm(enumerate(val_iter), total=len(val_iter))
+        loop_valid = tqdm(enumerate(test_iter), total=len(test_iter))
         valid_loss = model_evaluate(model, loop_valid, criterion, epoch, N_EPOCHS)
 
         end_time = time.time()
