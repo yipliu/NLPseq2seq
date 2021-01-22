@@ -1,0 +1,172 @@
+{"Src":"move to the red room","Trg":"F R"}
+{"Src":"move into the blue room through the green room","Trg":"F & C F B"}
+{"Src":"go to the pink room","Trg":"F R"}
+{"Src":"move to the green room but don t go through the yellow room","Trg":"& F C G ! Y"}
+{"Src":"bring the chair in the red room back to the purple room","Trg":"F & R F X"}
+{"Src":"go from the blue room to the red room then push the yellow object into the green room","Trg":"F & R F Z"}
+{"Src":"go to the blue room but avoid the green room","Trg":"& F B G ! C"}
+{"Src":"go to large green room through blue room","Trg":"F & B F C"}
+{"Src":"move to the green room by going through the yellow or red room","Trg":"F & | R Y F C"}
+{"Src":"go through the green room to get to the blue room","Trg":"F & C F B"}
+{"Src":"enter the room that isnt green then go to the blue room","Trg":"& F B G ! C"}
+{"Src":"go to pink room locate yellow object push to the green room","Trg":"F & R F Z"}
+{"Src":"go to the green room via the blue room","Trg":"F & B F C"}
+{"Src":"you must walk through the blue room to get to the green room","Trg":"F & B F C"}
+{"Src":"go through the blue room in to the green room","Trg":"F & B F C"}
+{"Src":"make your way to the green room by going through the blue room","Trg":"F & B F C"}
+{"Src":"first go to red room then go to green room","Trg":"F & R F C"}
+{"Src":"move to the red room","Trg":"F R"}
+{"Src":"go to the red room","Trg":"F R"}
+{"Src":"go through the green room into the blue room","Trg":"F & C F B"}
+{"Src":"go to the green room","Trg":"F C"}
+{"Src":"go to the blue room through red and yellow","Trg":"F & | R Y F B"}
+{"Src":"go to the red room","Trg":"F R"}
+{"Src":"go to below yellow object then go to green door","Trg":"F & R F Z"}
+{"Src":"move to the red room then move the chair to the blue room","Trg":"F & R F X"}
+{"Src":"go through the green room to the blue room","Trg":"F & C F B"}
+{"Src":"go through the blue room to the green room","Trg":"F & B F C"}
+{"Src":"move to the blue room without using the green room","Trg":"& F B G ! C"}
+{"Src":"go to red room and move red chair to blue room","Trg":"F & R F X"}
+{"Src":"go to green rectangle via blue square","Trg":"F & B F C"}
+{"Src":"go to the pink room","Trg":"F R"}
+{"Src":"go to the green room while avoiding the yellow rooms","Trg":"& F C G ! Y"}
+{"Src":"go into the red room and push the object into the green room","Trg":"F & R F Z"}
+{"Src":"go to the green room","Trg":"F C"}
+{"Src":"never follow red path to reach blue room","Trg":"& F B G ! R"}
+{"Src":"move toward either the yellow or green room then into the blue room","Trg":"F & | C Y F B"}
+{"Src":"go to green rectangle thru blue or red square but not yellow","Trg":"F & | R B F C"}
+{"Src":"go through the yellow or green room to get to the blue room","Trg":"F & | C Y F B"}
+{"Src":"go through the green room to get to the blue room","Trg":"F & C F B"}
+{"Src":"move to the green room","Trg":"F C"}
+{"Src":"go through the green or yellow room to get to the blue room","Trg":"F & | C Y F B"}
+{"Src":"enter the room that isn t yellow and then proceed to the green room","Trg":"& F C G ! Y"}
+{"Src":"go through the room that isn t red and enter the blue room","Trg":"& F B G ! R"}
+{"Src":"don t go through the blue room towards the green room","Trg":"& F C G ! B"}
+{"Src":"go to the red room and take the chair to the blue room","Trg":"F & R F X"}
+{"Src":"go to the pink room","Trg":"F R"}
+{"Src":"go to the green room avoiding the yellow room","Trg":"& F C G ! Y"}
+{"Src":"move to the large green room while avoiding the small blue room","Trg":"& F C G ! B"}
+{"Src":"progress through green rectangle room to the large blue room","Trg":"F & C F B"}
+{"Src":"move to the red room","Trg":"F R"}
+{"Src":"go to blue room through green or yellow room","Trg":"F & | C Y F B"}
+{"Src":"move into the red room and then push the chair into the blue room","Trg":"F & R F X"}
+{"Src":"go to red room","Trg":"F R"}
+{"Src":"go in and then go to the green room","Trg":"F C"}
+{"Src":"go to the red room then get the chair then go back to the blue room","Trg":"F & R F X"}
+{"Src":"enter into the room that is not green and continue through that room into the blue room","Trg":"& F B G ! C"}
+{"Src":"travel through the blue room into the green room","Trg":"F & B F C"}
+{"Src":"go to the blue room through the green room","Trg":"F & C F B"}
+{"Src":"go to red room get chair bring to green room","Trg":"F & R F Z"}
+{"Src":"go to the red room and push the chair in front of the blue room","Trg":"F & R F X"}
+{"Src":"go through the red or green room into the blue room","Trg":"F & | R Y F B"}
+{"Src":"exit room and go right to the green room","Trg":"F C"}
+{"Src":"go to the red room and push the chair into the blue room","Trg":"F & R F X"}
+{"Src":"go through the green or yellow room to the blue room","Trg":"F & | C Y F B"}
+{"Src":"move to the red room","Trg":"F R"}
+{"Src":"move to pink room pick up yellow thing move to green room","Trg":"F & R F Z"}
+{"Src":"move from blue room to red room then move to green room","Trg":"F & R F C"}
+{"Src":"go to the red room pick up the chair and go backto the blue room","Trg":"F & R F X"}
+{"Src":"go through blue room to get to green room","Trg":"F & B F C"}
+{"Src":"move into the red room and stay on the first square you end up on","Trg":"F R"}
+{"Src":"go into red room get chair go into blue room","Trg":"F & R F X"}
+{"Src":"move to the red room","Trg":"F R"}
+{"Src":"go to red room go to far wall go to chair push chair to green room","Trg":"F & R F Z"}
+{"Src":"go through the green room into the blue room","Trg":"F & C F B"}
+{"Src":"go to the green room","Trg":"F C"}
+{"Src":"go to red room move the item and go to green room","Trg":"F & R F Z"}
+{"Src":"move to the red room push the chair into the blue room","Trg":"F & R F X"}
+{"Src":"the robot avoids the red to get to the blue","Trg":"& F B G ! R"}
+{"Src":"move to the blue room avoiding the green room","Trg":"& F B G ! C"}
+{"Src":"enter the door to the blue room and exit the other door into the green room","Trg":"F & B F C"}
+{"Src":"up through the green or yellow box to reach the blue box","Trg":"F & | C Y F B"}
+{"Src":"go through the green and to the blue","Trg":"F & C F B"}
+{"Src":"go through the blue room to the green room","Trg":"F & B F C"}
+{"Src":"go to the red room","Trg":"F R"}
+{"Src":"move to the red room and push the chair back into the blue room","Trg":"F & R F X"}
+{"Src":"move to the red room","Trg":"F R"}
+{"Src":"go to the red room","Trg":"F R"}
+{"Src":"go to red room","Trg":"F R"}
+{"Src":"move to the red room move the yellow item to the green room","Trg":"F & R F Z"}
+{"Src":"enter the yellow or red room and proceed to the green room","Trg":"F & | R Y F C"}
+{"Src":"go through the red or blue room to get to the green room","Trg":"F & | R B F C"}
+{"Src":"go through blue room to green room","Trg":"F & B F C"}
+{"Src":"enter the green room without entering a yellow room","Trg":"& F C G ! Y"}
+{"Src":"enter the green room without entering a blue room","Trg":"& F C G ! B"}
+{"Src":"move to the red room","Trg":"F R"}
+{"Src":"go to the red room and push the red chair to the purple room","Trg":"F & R F X"}
+{"Src":"enter the red room go to the chair push the chair across the red room then push it into the blue room","Trg":"F & R F X"}
+{"Src":"don t go through the yellow room while going to the green room","Trg":"& F C G ! Y"}
+{"Src":"go through blue to get to green","Trg":"F & B F C"}
+{"Src":"go to the pink room","Trg":"F R"}
+{"Src":"go through the blue room into the green room","Trg":"F & B F C"}
+{"Src":"move to the green room","Trg":"F C"}
+{"Src":"go to the pink room","Trg":"F R"}
+{"Src":"go to the orange room then push the chair from the orange room into the green room","Trg":"F & R F Z"}
+{"Src":"go to the green room but avoid the yellow room","Trg":"& F C G ! Y"}
+{"Src":"go through the red or the yellow room to get to the blue room","Trg":"F & | R Y F B"}
+{"Src":"go to the blue room while avoiding the red room","Trg":"& F B G ! R"}
+{"Src":"the robot avoids yellow to get to the green","Trg":"& F C G ! Y"}
+{"Src":"go towards the green room while avoiding the blue room","Trg":"& F C G ! B"}
+{"Src":"go into the green room","Trg":"F C"}
+{"Src":"enter the room through the door that is not yellow drive through the room and exit the other door to the green room","Trg":"& F C G ! Y"}
+{"Src":"go through blue or red to get to green","Trg":"F & | R B F C"}
+{"Src":"go through the opposite of the red room to reach the blue room","Trg":"& F B G ! R"}
+{"Src":"enter the green room through the blue room","Trg":"F & B F C"}
+{"Src":"go to the red room","Trg":"F R"}
+{"Src":"go to the pink room","Trg":"F R"}
+{"Src":"push the backpack in from the red room into the green room","Trg":"F & R F Z"}
+{"Src":"go to the red room","Trg":"F R"}
+{"Src":"move to the red room push the chair into the blue room","Trg":"F & R F X"}
+{"Src":"enter blue room via green room","Trg":"F & C F B"}
+{"Src":"go through the blue room to get to the green room","Trg":"F & B F C"}
+{"Src":"move to the green room","Trg":"F C"}
+{"Src":"go through the blue room to the green room","Trg":"F & B F C"}
+{"Src":"go to the blue area by avoiding red area","Trg":"& F B G ! R"}
+{"Src":"go to the green room","Trg":"F C"}
+{"Src":"go to the green room but avoid the blue room","Trg":"& F C G ! B"}
+{"Src":"pass through any room that is not green to reach the blue room","Trg":"& F B G ! C"}
+{"Src":"move to the red room move to the object in the red room move the object to the green room","Trg":"F & R F Z"}
+{"Src":"the robot avoids red to get to blue","Trg":"& F B G ! R"}
+{"Src":"move to the red room","Trg":"F R"}
+{"Src":"go into the blue room and then the green room","Trg":"F & B F C"}
+{"Src":"go into the red room find the chair and bring it back into the purple room","Trg":"F & R F X"}
+{"Src":"go to the green room but don t go through the blue room","Trg":"& F C G ! B"}
+{"Src":"go to the red room","Trg":"F R"}
+{"Src":"took the yellow room to the blue room and the green room to the blue room","Trg":"F & | C Y F B"}
+{"Src":"push the red chair back into the blue room","Trg":"F & R F X"}
+{"Src":"go to the blue room but avoid the red room","Trg":"& F B G ! R"}
+{"Src":"go into the red room and push the chair into the purple room","Trg":"F & R F X"}
+{"Src":"move to the red room and then move to the green room","Trg":"F & R F C"}
+{"Src":"go through either the red or the yellow room to get to the green room","Trg":"F & | R Y F C"}
+{"Src":"go to green area by avoiding blue area","Trg":"& F C G ! B"}
+{"Src":"go to the red room and push the chair into the blue room","Trg":"F & R F X"}
+{"Src":"go through room that is not red to get to blue room","Trg":"& F B G ! R"}
+{"Src":"go to the red room","Trg":"F R"}
+{"Src":"go to the pink room","Trg":"F R"}
+{"Src":"go to the blue room then go to the green room","Trg":"F & B F C"}
+{"Src":"move to the red room move the chair to the blue room","Trg":"F & R F X"}
+{"Src":"go through the room that isn t blue and enter the green room","Trg":"& F C G ! B"}
+{"Src":"while avoiding yellow navigate to green","Trg":"& F C G ! Y"}
+{"Src":"move to the red room","Trg":"F R"}
+{"Src":"go to the blue room via the green room","Trg":"F & C F B"}
+{"Src":"go to the green room through the blue one","Trg":"F & B F C"}
+{"Src":"go to the green room","Trg":"F C"}
+{"Src":"move through the hallway to the blue room but only if it takes you through a green room","Trg":"F & C F B"}
+{"Src":"enter the green room and exit into the blue room","Trg":"F & C F B"}
+{"Src":"go to the red room and push the yellow thing into the green room","Trg":"F & R F Z"}
+{"Src":"without stepping on red spaces move into the blue room then stop once you enter it","Trg":"& F B G ! R"}
+{"Src":"go through the green room to the blue room","Trg":"F & C F B"}
+{"Src":"going through the red room or the yellow room straight to the blue room avoiding the green room","Trg":"& F B G ! C"}
+{"Src":"go in the red room and bring the chair back to blue room","Trg":"F & R F X"}
+{"Src":"go into the green room","Trg":"F C"}
+{"Src":"go through blue to reach green","Trg":"F & B F C"}
+{"Src":"go into the red room","Trg":"F R"}
+{"Src":"don t go through the green room towards the blue room","Trg":"& F B G ! C"}
+{"Src":"pass through the small green room to get to the large blue room","Trg":"F & C F B"}
+{"Src":"move through the green room to the blue room","Trg":"F & C F B"}
+{"Src":"go to green but not through blue","Trg":"& F C G ! B"}
+{"Src":"pass through the green rom to the blue room","Trg":"F & C F B"}
+{"Src":"follow the green room to the blue room","Trg":"F & C F B"}
+{"Src":"walk through any room except the blue room to enter the green room","Trg":"& F C G ! B"}
+{"Src":"go to the red room","Trg":"F R"}
+{"Src":"go to blue room without going to green room","Trg":"& F B G ! C"}
